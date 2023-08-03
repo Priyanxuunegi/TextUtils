@@ -37,7 +37,9 @@
   }
 }
 
-
+body{
+  background-color : #B9F3FC ; 
+}
 
 .blank{
   color : red ; 

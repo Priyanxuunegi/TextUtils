@@ -14,14 +14,13 @@ const TextForm = (props) => {
     setText(newText) ; 
     props.showAlert("Converted to Lowercase","success") ; 
   } 
-  const clearText = () =>{
-    console.log("Clear text") ;
+  const clearText = (event) =>{
+    console.log(event.target.value) ;
     setText("") ; 
     props.showAlert("Text is cleared","success") ; 
   }  
 
   const handleCopy = () =>{
-      console.log("I am copy") ; 
       var text = document.getElementById("mybox") ; 
       text.select() ; 
       navigator.clipboard.writeText(text.value) ;

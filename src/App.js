@@ -8,6 +8,7 @@ import Alerts from './components/Alerts';
 
 function App() {
   const [mode , setMode] = useState('light') ;
+ 
   const [alert , setAlert] = useState(null) ; 
   
 
@@ -27,21 +28,22 @@ function App() {
 
        if(mode === 'light'){
         setMode('dark') ; 
-        document.body.style.backgroundColor = '#042743' ; 
+        document.body.style.backgroundColor = '#393053' ; 
         showAlert("Dark mode has been enabled","success") ;
         
        }
        else {
         setMode('light') ; 
-        document.body.style.backgroundColor = 'white' ; 
+        document.body.style.backgroundColor = '#B9F3FC' ; 
         showAlert("Light mode has been enabled","success") ;
        }
+   
   }
   
   
   return (
   <>
-    
+     
     <Navbar title = "TextUtils" mode = {mode} toggleMode = {toggleMode}/>
     <Alerts alert = {alert} />
     <div className = "container my-3"> 
